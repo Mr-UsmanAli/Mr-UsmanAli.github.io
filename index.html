@@ -3,176 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usman Ali - PhD Candidate in AI & Computer Vision</title>
+    <title>Usman Ali | PhD Candidate in AI & Computer Vision</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
+            --primary: #2E5E5E;    /* Professional teal */
+            --secondary: #4F9D9D;  /* Complementary teal */
+            --accent: #FFD700;     /* Gold accent */
+            --dark: #1A2E2E;       /* Dark teal */
+            --light: #F5F8F8;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light);
+            font-family: 'Lora', serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--light);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .header {
-            text-align: center;
-            padding: 4rem 0;
-            background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)),
-                        url('your-header-bg.jpg');
-            background-size: cover;
+        .academic-header {
+            background: var(--primary);
             color: white;
+            padding: 4rem 2rem;
+            border-bottom: 5px solid var(--accent);
         }
 
-        .profile-img {
+        .profile-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .profile-sidebar {
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .academic-photo {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            margin: 1rem auto;
-            border: 5px solid var(--secondary);
+            border: 5px solid var(--accent);
+            margin: 0 auto 1.5rem;
         }
 
-        .nav {
+        .nav-tabs {
             display: flex;
+            gap: 1.5rem;
             justify-content: center;
-            gap: 2rem;
-            padding: 1rem;
-            background: var(--primary);
+            margin: 2rem 0;
         }
 
-        .nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
+        .nav-tabs a {
+            color: var(--primary);
+            font-weight: 600;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
             transition: all 0.3s;
         }
 
-        .nav a:hover {
-            color: var(--secondary);
+        .nav-tabs a:hover {
+            background: var(--secondary);
+            color: white;
         }
 
-        .section {
+        .research-card {
             background: white;
             padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 1.5rem 0;
+            border-left: 5px solid var(--accent);
+            transition: transform 0.3s;
         }
 
-        .publications li {
-            margin: 1rem 0;
+        .research-card:hover {
+            transform: translateX(10px);
+        }
+
+        .publication-list li {
+            margin: 1.5rem 0;
             padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
             border-left: 3px solid var(--secondary);
         }
 
-        .skill-bar {
-            background-color: #eee;
-            border-radius: 5px;
-            margin: 1rem 0;
+        .timeline-item {
+            margin: 2rem 0;
+            padding-left: 2rem;
+            position: relative;
         }
 
-        .skill-progress {
-            height: 10px;
-            background-color: var(--secondary);
-            border-radius: 5px;
-            transition: width 1s ease-in-out;
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: var(--accent);
+            border-radius: 50%;
         }
 
-        .theme-toggle {
-            position: fixed;
-            right: 2rem;
-            bottom: 2rem;
-            cursor: pointer;
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .dark-mode {
+            background: var(--dark);
+            color: white;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <img src="your-profile.jpg" alt="Usman Ali" class="profile-img">
-        <h1>Usman Ali</h1>
-        <p>MSc Candidate in Information & Communication Engineering</p>
-        <div class="social">
-            <a href="https://linkedin.com/in/usmanali07" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Usmanali07" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:usmanalipgc@gmail.com"><i class="fas fa-envelope"></i></a>
+    <header class="academic-header">
+        <div class="profile-container">
+            <div class="profile-sidebar">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEE6Ql39M1Dvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692809444219?e=1746057600&v=beta&t=wujRQaAEm2pbnbFfT5AujxfmnXDOgrOxR9PsJVWeXX8" alt="Usman Ali" class="academic-photo">
+                <h2>Usman Ali</h2>
+                <p>PhD Candidate</p>
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> usmanalipgc@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Chengdu, China</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-researchgate"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="academic-intro">
+                <h1>Exploring the Frontiers of AI & Computer Vision</h1>
+                <p class="research-focus">Specializing in deep learning applications for medical imaging analysis</p>
+                <a href="#contact" class="cta-button">Request Academic CV</a>
+            </div>
         </div>
     </header>
 
-    <nav class="nav">
+    <nav class="nav-tabs">
         <a href="#research">Research</a>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#grants">Funding</a>
+        <a href="#contact">Collaborate</a>
     </nav>
 
-    <div class="container">
-        <section id="research" class="section">
-            <h2>Research Statement</h2>
-            <p>My research focuses on developing AI-driven solutions for computer vision applications...</p>
-            <h3>Research Interests</h3>
-            <ul>
-                <li>Deep Learning for Image Processing</li>
-                <li>Generative AI Models</li>
-                <li>Real-time Object Detection</li>
-            </ul>
-        </section>
+    <main class="profile-container">
+        <section id="research">
+            <div class="research-card">
+                <h2>Research Statement</h2>
+                <p>My work focuses on developing novel computer vision algorithms for early disease detection...</p>
+            </div>
 
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>MSc Information & Communication Engineering</h3>
-                <p>University of Electronic Science and Technology of China (2024-Present)</p>
-                <p><strong>Thesis:</strong> "Advanced Image Processing Techniques Using Deep Learning"</p>
+            <div class="research-card">
+                <h3>Current Projects</h3>
+                <ul class="publication-list">
+                    <li>
+                        <h4>3D Medical Image Segmentation</h4>
+                        <p>Developing deep learning models for tumor detection | Python, PyTorch</p>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section id="publications" class="section">
-            <h2>Research Projects</h2>
-            <ul class="publications">
-                <li>
-                    <h4>Real-time Fraud Detection System</h4>
-                    <p>Developed ML pipeline achieving 98% accuracy | Python, TensorFlow</p>
-                    <a href="https://github.com/Usmanali07/Online-Fraud-Detection-Using-ML.git">View Code</a>
-                </li>
-            </ul>
-        </section>
-
-        <section id="experience" class="section">
-            <h2>Professional Experience</h2>
+        <section id="education">
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Python Developer - Broadstone Technologies</h3>
-                    <p>2022-2024 | Led development of AI-powered loyalty platform</p>
+                    <h3>MSc Information & Communication Engineering</h3>
+                    <p>University of Electronic Science and Technology of China</p>
+                    <p><strong>Thesis:</strong> "Advanced Image Processing Techniques Using Deep Learning"</p>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <form id="contactForm">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+        <section id="contact">
+            <div class="contact-form">
+                <h2>Academic Inquiry</h2>
+                <form id="collab-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Institutional Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Research Collaboration Proposal" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Inquiry</button>
+                </form>
+            </div>
         </section>
-    </div>
+    </main>
 
     <script>
-        // Interactive elements
+        // Interactive Dark Mode
+        const themeToggle = document.createElement('div');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        themeToggle.style.position = 'fixed';
+        themeToggle.style.bottom = '30px';
+        themeToggle.style.right = '30px';
+        themeToggle.style.cursor = 'pointer';
+        document.body.appendChild(themeToggle);
+
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -182,24 +229,12 @@
             });
         });
 
-        // Form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // Form Handling
+        document.getElementById('collab-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Message sent successfully!');
+            // Add form submission logic
+            alert('Inquiry submitted successfully');
             this.reset();
-        });
-
-        // Skill animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    entry.target.style.width = entry.target.dataset.width;
-                }
-            });
-        });
-
-        document.querySelectorAll('.skill-progress').forEach((bar) => {
-            observer.observe(bar);
         });
     </script>
 </body>
