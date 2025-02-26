@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usman Ali - Professional CV</title>
+    <title>Usman Ali - PhD Candidate in AI & Computer Vision</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --light-gray: #f5f6fa;
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
         }
 
         body {
@@ -16,239 +18,189 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            background-color: var(--light);
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 30px;
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 30px;
+            padding: 2rem;
         }
 
-        .sidebar {
-            background-color: var(--primary-color);
+        .header {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(rgba(44,62,80,0.9), rgba(44,62,80,0.9)),
+                        url('your-header-bg.jpg');
+            background-size: cover;
             color: white;
-            padding: 30px;
         }
 
-        .main-content {
-            padding-right: 30px;
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 1rem auto;
+            border: 5px solid var(--secondary);
         }
 
-        h1, h2, h3 {
-            margin: 0;
-            color: var(--primary-color);
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background: var(--primary);
         }
 
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
-            font-family: 'Lora', serif;
-        }
-
-        h2 {
-            font-size: 1.4em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 25px 0 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--secondary-color);
-        }
-
-        h3 {
-            font-size: 1.1em;
-            margin: 15px 0 5px;
-        }
-
-        .contact-info {
-            margin-bottom: 30px;
-        }
-
-        .contact-info p {
-            margin: 8px 0;
-            font-size: 0.9em;
-        }
-
-        a {
-            color: var(--secondary-color);
+        .nav a {
+            color: white;
             text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .nav a:hover {
+            color: var(--secondary);
         }
 
-        .experience-item, .education-item {
-            margin-bottom: 25px;
+        .section {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .date {
-            font-size: 0.9em;
-            color: #7f8c8d;
-            margin-bottom: 5px;
+        .publications li {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-left: 3px solid var(--secondary);
         }
 
-        ul {
-            padding-left: 20px;
-            margin: 10px 0;
+        .skill-bar {
+            background-color: #eee;
+            border-radius: 5px;
+            margin: 1rem 0;
         }
 
-        li {
-            margin-bottom: 8px;
+        .skill-progress {
+            height: 10px;
+            background-color: var(--secondary);
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
         }
 
-        .skills-list {
-            columns: 2;
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .certification-item {
-            margin-bottom: 15px;
-        }
-
-        .language-bar {
-            height: 8px;
-            background-color: #ecf0f1;
-            border-radius: 4px;
-            margin: 5px 0 15px;
-        }
-
-        .language-progress {
-            height: 100%;
-            background-color: var(--secondary-color);
-            border-radius: 4px;
-        }
-
-        @media print {
-            body {
-                font-size: 12px;
-            }
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                background-color: white;
-                color: #333;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-                padding: 20px;
-            }
-            .sidebar {
-                order: 2;
-            }
+        .theme-toggle {
+            position: fixed;
+            right: 2rem;
+            bottom: 2rem;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        <img src="your-profile.jpg" alt="Usman Ali" class="profile-img">
+        <h1>Usman Ali</h1>
+        <p>MSc Candidate in Information & Communication Engineering</p>
+        <div class="social">
+            <a href="https://linkedin.com/in/usmanali07" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Usmanali07" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:usmanalipgc@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="container">
-        <aside class="sidebar">
-            <div class="contact-info">
-                <h1>Usman Ali</h1>
-                <p>Python Developer & AI Specialist</p>
-                
-                <h2>Contact</h2>
-                <p>📞 (+86) 17311375127</p>
-                <p>📧 usmanalipgc@gmail.com</p>
-                <p>🌐 <a href="https://linkedin.com/in/usmanali07" target="_blank">linkedin.com/in/usmanali07</a></p>
-                <p>💻 <a href="https://github.com/Usmanali07" target="_blank">github.com/Usmanali07</a></p>
-                
-                <h2>Skills</h2>
-                <ul class="skills-list">
-                    <li>Python Development</li>
-                    <li>Machine Learning</li>
-                    <li>Flask & REST APIs</li>
-                    <li>PostgreSQL/MongoDB</li>
-                    <li>Docker & CI/CD</li>
-                    <li>Computer Vision</li>
-                    <li>Linux System Admin</li>
-                    <li>Data Analysis</li>
-                </ul>
+        <section id="research" class="section">
+            <h2>Research Statement</h2>
+            <p>My research focuses on developing AI-driven solutions for computer vision applications...</p>
+            <h3>Research Interests</h3>
+            <ul>
+                <li>Deep Learning for Image Processing</li>
+                <li>Generative AI Models</li>
+                <li>Real-time Object Detection</li>
+            </ul>
+        </section>
 
-                <h2>Languages</h2>
-                <p>Urdu (Native)<br>
-                English (Professional)</p>
-                <div class="language-bar">
-                    <div class="language-progress" style="width: 80%"></div>
-                </div>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>MSc Information & Communication Engineering</h3>
+                <p>University of Electronic Science and Technology of China (2024-Present)</p>
+                <p><strong>Thesis:</strong> "Advanced Image Processing Techniques Using Deep Learning"</p>
+            </div>
+        </section>
 
-                <h2>Certifications</h2>
-                <div class="certification-item">
-                    <p>Google Data Analytics</p>
-                    <small>Coursera</small>
-                </div>
-                <div class="certification-item">
-                    <p>TensorFlow Developer</p>
-                    <small>DeepLearning.AI</small>
+        <section id="publications" class="section">
+            <h2>Research Projects</h2>
+            <ul class="publications">
+                <li>
+                    <h4>Real-time Fraud Detection System</h4>
+                    <p>Developed ML pipeline achieving 98% accuracy | Python, TensorFlow</p>
+                    <a href="https://github.com/Usmanali07/Online-Fraud-Detection-Using-ML.git">View Code</a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Python Developer - Broadstone Technologies</h3>
+                    <p>2022-2024 | Led development of AI-powered loyalty platform</p>
                 </div>
             </div>
-        </aside>
+        </section>
 
-        <main class="main-content">
-            <section class="professional-summary">
-                <h2>Professional Summary</h2>
-                <p>Full-stack Python developer with 2+ years experience in building AI-powered applications. Specialized in computer vision, machine learning integration, and cloud-based solutions. Proven track record of delivering production-ready systems from concept to deployment.</p>
-            </section>
-
-            <section class="experience">
-                <h2>Professional Experience</h2>
-                <div class="experience-item">
-                    <div class="date">Aug 2022 - Present</div>
-                    <h3>Python Developer @ Broadstone Technologies</h3>
-                    <ul>
-                        <li>Led development of Meezy Loyalty app using Flask & PostgreSQL, achieving 95% API reliability</li>
-                        <li>Implemented real-time image processing pipeline using OpenCV and Scikit-image</li>
-                        <li>Architected VPN solution serving 5,000+ daily users with WireGuard and Docker</li>
-                        <li>Integrated payment gateways and third-party APIs with 99.9% uptime</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="date">Dec 2021 - Mar 2022</div>
-                    <h3>AI Intern @ Ekkel.AI</h3>
-                    <ul>
-                        <li>Developed production-grade ML models for NLP applications</li>
-                        <li>Optimized computer vision models achieving 15% performance improvement</li>
-                        <li>Created API endpoints for model serving with Flask</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="education">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <div class="date">2024 - Present</div>
-                    <h3>MSc Information & Communication Engineering</h3>
-                    <p>University of Electronic Science and Technology of China</p>
-                </div>
-
-                <div class="education-item">
-                    <div class="date">2019 - 2023</div>
-                    <h3>BSc Computer Science</h3>
-                    <p>Virtual University of Pakistan - GPA: 3.60/4</p>
-                </div>
-            </section>
-
-            <section class="projects">
-                <h2>Key Projects</h2>
-                <div class="project-item">
-                    <h3>Fraud Detection System</h3>
-                    <ul>
-                        <li>Developed ML model with 98% detection accuracy</li>
-                        <li>Implemented Streamlit dashboard and Heroku deployment</li>
-                        <li>Compared 13 ML algorithms using AutoML</li>
-                    </ul>
-                    <a href="https://github.com/Usmanali07/Online-Fraud-Detection-Using-ML.git">View Project →</a>
-                </div>
-            </section>
-        </main>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </div>
+
+    <script>
+        // Interactive elements
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent successfully!');
+            this.reset();
+        });
+
+        // Skill animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.width = entry.target.dataset.width;
+                }
+            });
+        });
+
+        document.querySelectorAll('.skill-progress').forEach((bar) => {
+            observer.observe(bar);
+        });
+    </script>
 </body>
 </html>
