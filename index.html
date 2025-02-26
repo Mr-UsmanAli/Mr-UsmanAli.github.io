@@ -3,203 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usman Ali | AI Research Scholar</title>
+    <title>Usman Ali - Professional CV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2C3E50;    /* Professional Navy */
-            --secondary: #3498DB;  /* Trust Blue */
-            --accent: #E74C3C;     /* Academic Red */
-            --light: #F8F9FA;
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #f8f9fa;
             --dark: #212529;
         }
 
         body {
-            font-family: 'Merriweather', serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.8;
-            color: var(--dark);
-            background: var(--light);
-        }
-
-        .academic-header {
-            background: var(--primary);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-            border-bottom: 5px solid var(--accent);
-        }
-
-        .profile-photo {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            border: 5px solid var(--secondary);
-            margin: 2rem auto;
-        }
-
-        .nav-academic {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 1.5rem;
-            background: var(--light);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .nav-academic a {
-            color: var(--primary);
-            font-weight: 600;
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            transition: all 0.3s;
-        }
-
-        .nav-academic a:hover {
-            background: var(--secondary);
-            color: white;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--light);
         }
 
         .container {
             max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
 
-        .section-card {
-            background: white;
-            padding: 2.5rem;
-            margin: 2rem 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        .header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 5px solid var(--secondary);
+        }
+
+        .section {
+            margin: 40px 0;
+            padding: 20px;
             border-left: 4px solid var(--secondary);
         }
 
-        .publication-item {
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-left: 3px solid var(--accent);
-            transition: transform 0.3s;
-        }
-
-        .publication-item:hover {
-            transform: translateX(10px);
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            border-left: 3px solid var(--secondary);
-        }
-
         .timeline-item {
-            margin: 2.5rem 0;
-            padding-left: 2rem;
-            position: relative;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            margin-bottom: 30px;
+            gap: 20px;
         }
 
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -10px;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            background: var(--accent);
-            border-radius: 50%;
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .skill-tag {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            margin: 0.3rem;
+        .certification-card {
             background: var(--light);
-            border-radius: 20px;
-            border: 1px solid var(--secondary);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
         }
 
-        .contact-card {
-            background: var(--primary);
+        .language-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .language-table th, .language-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--secondary);
             color: white;
-            padding: 3rem;
-            border-radius: 10px;
-            text-align: center;
+            border-radius: 20px;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <header class="academic-header">
-        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEE6Ql39M1Dvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692809444219?e=1746057600&v=beta&t=wujRQaAEm2pbnbFfT5AujxfmnXDOgrOxR9PsJVWeXX8" alt="Usman Ali" class="profile-photo">
-        <h1>Usman Ali</h1>
-        <p>PhD Candidate in Artificial Intelligence & Computer Vision</p>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin fa-xl"></i></a>
-            <a href="#"><i class="fab fa-github fa-xl"></i></a>
-            <a href="#"><i class="fab fa-researchgate fa-xl"></i></a>
-            <a href="#"><i class="fas fa-file-pdf fa-xl"></i></a>
-        </div>
-    </header>
-
-    <nav class="nav-academic">
-        <a href="#research">Research</a>
-        <a href="#education">Education</a>
-        <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <main class="container">
-        <!-- Research Section -->
-        <section id="research" class="section-card">
-            <h2>Research Focus</h2>
-            <p>Developing advanced computer vision algorithms for medical imaging analysis...</p>
-            
-            <h3>Current Projects</h3>
-            <div class="publication-item">
-                <h4>3D Medical Image Segmentation</h4>
-                <p>Deep learning models for tumor detection | Python, PyTorch</p>
-                <a href="#" class="btn">View Preprint</a>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Usman Ali</h1>
+            <div class="contact-info">
+                <p>
+                    <i class="fas fa-flag"></i> Pakistani | 
+                    <i class="fas fa-phone"></i> (+86) 17311375127 | 
+                    <i class="fas fa-envelope"></i> usmanalipgc@gmail.com
+                </p>
+                <p>
+                    <a href="https://linkedin.com/in/usmanali07" target="_blank" class="badge">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/Usmanali07" target="_blank" class="badge">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </p>
             </div>
-        </section>
+        </header>
 
-        <!-- Education Section -->
-        <section id="education" class="section-card">
-            <h2>Academic Credentials</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>MSc Information & Communication Engineering</h3>
-                    <p>University of Electronic Science and Technology of China (2024-Present)</p>
-                    <p><em>Thesis:</em> "Advanced Image Processing Techniques Using Deep Learning"</p>
+        <!-- Work Experience -->
+        <section class="section">
+            <h2>Professional Experience</h2>
+            
+            <div class="timeline-item">
+                <div class="date">Aug 2022 - Oct 2024</div>
+                <div>
+                    <h3>Python Developer - Broadstone Technologies, Lahore</h3>
+                    <ul>
+                        <li>Designed and developed Meezy Loyalty app using PostgreSQL, Flask, and DigitalOcean APIs</li>
+                        <li>Implemented AI-powered image processing with Scikit-image and OpenCV</li>
+                        <li>Maintained 3D AR app "Parsl" using MongoDB and Flask Blueprint</li>
+                        <li>Developed Cloaked Privacy VPN with WireGuard and Docker</li>
+                    </ul>
+                    <a href="https://broadstonetech.com/" class="badge">Company Website</a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date">Dec 2021 - Mar 2022</div>
+                <div>
+                    <h3>AI Intern - Ekkel.AI, Pakistan</h3>
+                    <ul>
+                        <li>Converted ML models to APIs for application integration</li>
+                        <li>Developed solutions using NLP and Computer Vision</li>
+                        <li>Implemented machine learning pipelines for real-world applications</li>
+                    </ul>
+                    <a href="https://www.ekkel.ai/" class="badge">Company Website</a>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="section-card">
-            <h2>Professional Experience</h2>
+        <!-- Education -->
+        <section class="section">
+            <h2>Education</h2>
+            
             <div class="timeline-item">
-                <h3>Lead Python Developer</h3>
-                <p>Broadstone Technologies | 2022-2024</p>
-                <ul>
-                    <li>Developed AI-powered loyalty platform with 50k+ users</li>
-                    <li>Implemented real-time image processing pipeline</li>
-                </ul>
+                <div class="date">Aug 2024 - Current</div>
+                <div>
+                    <h3>MSc Information & Communication Engineering</h3>
+                    <p>University of Electronic Science and Technology of China</p>
+                    <a href="https://en.uestc.edu.cn/" class="badge">University Website</a>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="date">Apr 2019 - Apr 2023</div>
+                <div>
+                    <h3>BSc Computer Science</h3>
+                    <p>Virtual University of Pakistan - GPA: 3.60/4 (B+)</p>
+                    <a href="http://www.vu.edu.pk/" class="badge">University Website</a>
+                </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-card">
-            <h2>Academic Collaboration</h2>
-            <p>Open to research opportunities and PhD positions</p>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> usmanalipgc@gmail.com</p>
-                <p><i class="fas fa-phone"></i> (+86) 173-1137-5127</p>
+        <!-- Projects -->
+        <section class="section">
+            <h2>Key Projects</h2>
+            
+            <div class="timeline-item">
+                <div class="date">Jun 2022 - Jan 2023</div>
+                <div>
+                    <h3>Online Payments Fraud Detection System</h3>
+                    <ul>
+                        <li>Compared 13 ML models using AutoML</li>
+                        <li>Achieved 98% accuracy with Random Forest</li>
+                        <li>Developed Streamlit API and deployed on Heroku</li>
+                    </ul>
+                    <a href="https://github.com/Usmanali07/Online-Fraud-Detection-Using-ML.git" class="badge">View Project</a>
+                </div>
             </div>
-            <a href="cv.pdf" class="btn">Download Academic CV</a>
         </section>
-    </main>
+
+        <!-- Skills -->
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <h3>Machine Learning</h3>
+                    <ul>
+                        <li>TensorFlow/Keras</li>
+                        <li>Scikit-learn</li>
+                        <li>OpenCV/Scikit-image</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python (NumPy, Pandas)</li>
+                        <li>C/C++</li>
+                        <li>Flask</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Git</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h2>Certifications</h2>
+            <div class="certification-card">
+                <h3>Google Data Analytics Professional Certificate</h3>
+                <p>Coursera | 2020</p>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/7QFYNDSQK52V" class="badge">Verify</a>
+            </div>
+            <!-- Add other certifications similarly -->
+        </section>
+
+        <!-- Languages -->
+        <section class="section">
+            <h2>Language Proficiency</h2>
+            <table class="language-table">
+                <tr>
+                    <th>Language</th>
+                    <th>Understanding</th>
+                    <th>Speaking</th>
+                    <th>Writing</th>
+                </tr>
+                <tr>
+                    <td>Urdu (Native)</td>
+                    <td colspan="3">Native Proficiency</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>B2</td>
+                    <td>B2</td>
+                    <td>B2</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Additional Sections -->
+        <section class="section">
+            <h2>Honors & Awards</h2>
+            <ul>
+                <li>Merit Based Full Scholarship – Punjab Group of Colleges (Sep 2016)</li>
+                <li>Fully Funded AI Course – Government of Pakistan (Nov 2020)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Volunteering</h2>
+            <ul>
+                <li>Blood Donor Society (2016-Present)</li>
+                <li>Rescue Cadet Corps (2020-Present)</li>
+            </ul>
+        </section>
+
+    </div>
 
     <script>
-        // Smooth scroll functionality
+        // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -208,9 +288,6 @@
                 });
             });
         });
-
-        // Dynamic year update
-        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
