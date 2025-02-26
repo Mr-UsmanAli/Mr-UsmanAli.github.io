@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usman Ali | PhD Candidate in AI & Computer Vision</title>
+    <title>Usman Ali | AI Research Scholar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2E5E5E;    /* Professional teal */
-            --secondary: #4F9D9D;  /* Complementary teal */
-            --accent: #FFD700;     /* Gold accent */
-            --dark: #1A2E2E;       /* Dark teal */
-            --light: #F5F8F8;
+            --primary: #2C3E50;    /* Professional Navy */
+            --secondary: #3498DB;  /* Trust Blue */
+            --accent: #E74C3C;     /* Academic Red */
+            --light: #F8F9FA;
+            --dark: #212529;
         }
 
         body {
-            font-family: 'Lora', serif;
+            font-family: 'Merriweather', serif;
             line-height: 1.8;
             color: var(--dark);
             background: var(--light);
@@ -25,40 +25,28 @@
             background: var(--primary);
             color: white;
             padding: 4rem 2rem;
+            text-align: center;
             border-bottom: 5px solid var(--accent);
         }
 
-        .profile-container {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 3rem;
-            max-width: 1200px;
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 5px solid var(--secondary);
             margin: 2rem auto;
         }
 
-        .profile-sidebar {
-            background: white;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-
-        .academic-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid var(--accent);
-            margin: 0 auto 1.5rem;
-        }
-
-        .nav-tabs {
+        .nav-academic {
             display: flex;
-            gap: 1.5rem;
             justify-content: center;
-            margin: 2rem 0;
+            gap: 2rem;
+            padding: 1.5rem;
+            background: var(--light);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        .nav-tabs a {
+        .nav-academic a {
             color: var(--primary);
             font-weight: 600;
             padding: 0.8rem 1.5rem;
@@ -66,27 +54,35 @@
             transition: all 0.3s;
         }
 
-        .nav-tabs a:hover {
+        .nav-academic a:hover {
             background: var(--secondary);
             color: white;
         }
 
-        .research-card {
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-card {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--secondary);
+        }
+
+        .publication-item {
+            padding: 1.5rem;
             margin: 1.5rem 0;
-            border-left: 5px solid var(--accent);
+            border-left: 3px solid var(--accent);
             transition: transform 0.3s;
         }
 
-        .research-card:hover {
+        .publication-item:hover {
             transform: translateX(10px);
-        }
-
-        .publication-list li {
-            margin: 1.5rem 0;
-            padding: 1rem;
-            border-bottom: 1px solid #eee;
         }
 
         .timeline {
@@ -96,7 +92,7 @@
         }
 
         .timeline-item {
-            margin: 2rem 0;
+            margin: 2.5rem 0;
             padding-left: 2rem;
             position: relative;
         }
@@ -112,114 +108,98 @@
             border-radius: 50%;
         }
 
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
+        .skill-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.3rem;
+            background: var(--light);
+            border-radius: 20px;
+            border: 1px solid var(--secondary);
         }
 
-        .dark-mode {
-            background: var(--dark);
+        .contact-card {
+            background: var(--primary);
             color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header class="academic-header">
-        <div class="profile-container">
-            <div class="profile-sidebar">
-                <img src="https://media.licdn.com/dms/image/v2/D4D03AQEE6Ql39M1Dvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692809444219?e=1746057600&v=beta&t=wujRQaAEm2pbnbFfT5AujxfmnXDOgrOxR9PsJVWeXX8" alt="Usman Ali" class="academic-photo">
-                <h2>Usman Ali</h2>
-                <p>PhD Candidate</p>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> usmanalipgc@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Chengdu, China</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-researchgate"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="academic-intro">
-                <h1>Exploring the Frontiers of AI & Computer Vision</h1>
-                <p class="research-focus">Specializing in deep learning applications for medical imaging analysis</p>
-                <a href="#contact" class="cta-button">Request Academic CV</a>
-            </div>
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEE6Ql39M1Dvg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692809444219?e=1746057600&v=beta&t=wujRQaAEm2pbnbFfT5AujxfmnXDOgrOxR9PsJVWeXX8" alt="Usman Ali" class="profile-photo">
+        <h1>Usman Ali</h1>
+        <p>PhD Candidate in Artificial Intelligence & Computer Vision</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin fa-xl"></i></a>
+            <a href="#"><i class="fab fa-github fa-xl"></i></a>
+            <a href="#"><i class="fab fa-researchgate fa-xl"></i></a>
+            <a href="#"><i class="fas fa-file-pdf fa-xl"></i></a>
         </div>
     </header>
 
-    <nav class="nav-tabs">
+    <nav class="nav-academic">
         <a href="#research">Research</a>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
-        <a href="#grants">Funding</a>
-        <a href="#contact">Collaborate</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <main class="profile-container">
-        <section id="research">
-            <div class="research-card">
-                <h2>Research Statement</h2>
-                <p>My work focuses on developing novel computer vision algorithms for early disease detection...</p>
+    <main class="container">
+        <!-- Research Section -->
+        <section id="research" class="section-card">
+            <h2>Research Focus</h2>
+            <p>Developing advanced computer vision algorithms for medical imaging analysis...</p>
+            
+            <h3>Current Projects</h3>
+            <div class="publication-item">
+                <h4>3D Medical Image Segmentation</h4>
+                <p>Deep learning models for tumor detection | Python, PyTorch</p>
+                <a href="#" class="btn">View Preprint</a>
             </div>
+        </section>
 
-            <div class="research-card">
-                <h3>Current Projects</h3>
-                <ul class="publication-list">
-                    <li>
-                        <h4>3D Medical Image Segmentation</h4>
-                        <p>Developing deep learning models for tumor detection | Python, PyTorch</p>
-                    </li>
+        <!-- Education Section -->
+        <section id="education" class="section-card">
+            <h2>Academic Credentials</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>MSc Information & Communication Engineering</h3>
+                    <p>University of Electronic Science and Technology of China (2024-Present)</p>
+                    <p><em>Thesis:</em> "Advanced Image Processing Techniques Using Deep Learning"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section-card">
+            <h2>Professional Experience</h2>
+            <div class="timeline-item">
+                <h3>Lead Python Developer</h3>
+                <p>Broadstone Technologies | 2022-2024</p>
+                <ul>
+                    <li>Developed AI-powered loyalty platform with 50k+ users</li>
+                    <li>Implemented real-time image processing pipeline</li>
                 </ul>
             </div>
         </section>
 
-        <section id="education">
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>MSc Information & Communication Engineering</h3>
-                    <p>University of Electronic Science and Technology of China</p>
-                    <p><strong>Thesis:</strong> "Advanced Image Processing Techniques Using Deep Learning"</p>
-                </div>
+        <!-- Contact Section -->
+        <section id="contact" class="contact-card">
+            <h2>Academic Collaboration</h2>
+            <p>Open to research opportunities and PhD positions</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> usmanalipgc@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (+86) 173-1137-5127</p>
             </div>
-        </section>
-
-        <section id="contact">
-            <div class="contact-form">
-                <h2>Academic Inquiry</h2>
-                <form id="collab-form">
-                    <div class="form-group">
-                        <input type="text" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Institutional Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Research Collaboration Proposal" rows="5" required></textarea>
-                    </div>
-                    <button type="submit">Send Inquiry</button>
-                </form>
-            </div>
+            <a href="cv.pdf" class="btn">Download Academic CV</a>
         </section>
     </main>
 
     <script>
-        // Interactive Dark Mode
-        const themeToggle = document.createElement('div');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        themeToggle.style.position = 'fixed';
-        themeToggle.style.bottom = '30px';
-        themeToggle.style.right = '30px';
-        themeToggle.style.cursor = 'pointer';
-        document.body.appendChild(themeToggle);
-
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-
-        // Smooth Scroll
+        // Smooth scroll functionality
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -229,13 +209,8 @@
             });
         });
 
-        // Form Handling
-        document.getElementById('collab-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Add form submission logic
-            alert('Inquiry submitted successfully');
-            this.reset();
-        });
+        // Dynamic year update
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
