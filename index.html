@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD AI Researcher | Consultant | Engineer</title>
+    <title>Usman Ali | Medical AI Researcher | MSc Candidate</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -15,6 +15,8 @@
                         secondary: '#10B981',
                         dark: '#1F2937',
                         light: '#F9FAFB',
+                        medical: '#6366F1',
+                        research: '#8B5CF6',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -35,7 +37,7 @@
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            background-image: linear-gradient(90deg, #3B82F6, #10B981);
+            background-image: linear-gradient(90deg, #3B82F6, #8B5CF6);
         }
         
         .card-hover:hover {
@@ -61,6 +63,21 @@
         .nav-link:hover::after {
             width: 100%;
         }
+        
+        .research-badge {
+            background: linear-gradient(135deg, #6366F1, #8B5CF6);
+            color: white;
+        }
+        
+        .publication-card {
+            border-left: 4px solid #3B82F6;
+            transition: all 0.3s ease;
+        }
+        
+        .publication-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="bg-light text-dark">
@@ -69,14 +86,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
-                    <a href="#" class="text-xl font-bold text-primary">AI<span class="text-secondary"> Researcher</span></a>
+                    <a href="#" class="text-xl font-bold text-primary">Usman<span class="text-research">Ali</span></a>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="nav-link text-gray-700 hover:text-primary transition">Home</a>
                     <a href="#about" class="nav-link text-gray-700 hover:text-primary transition">About</a>
-                    <a href="#services" class="nav-link text-gray-700 hover:text-primary transition">Services</a>
-                    <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition">Projects</a>
                     <a href="#research" class="nav-link text-gray-700 hover:text-primary transition">Research</a>
+                    <a href="#publications" class="nav-link text-gray-700 hover:text-primary transition">Publications</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-primary transition">Projects</a>
+                    <a href="#experience" class="nav-link text-gray-700 hover:text-primary transition">Experience</a>
                     <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition">Contact</a>
                 </div>
                 <div class="md:hidden flex items-center">
@@ -92,29 +110,33 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white pb-3 px-4 shadow-lg">
             <a href="#home" class="block py-2 text-gray-700 hover:text-primary transition">Home</a>
             <a href="#about" class="block py-2 text-gray-700 hover:text-primary transition">About</a>
-            <a href="#services" class="block py-2 text-gray-700 hover:text-primary transition">Services</a>
-            <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition">Projects</a>
             <a href="#research" class="block py-2 text-gray-700 hover:text-primary transition">Research</a>
+            <a href="#publications" class="block py-2 text-gray-700 hover:text-primary transition">Publications</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-primary transition">Projects</a>
+            <a href="#experience" class="block py-2 text-gray-700 hover:text-primary transition">Experience</a>
             <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-50 to-green-50">
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-50 to-purple-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:flex items-center justify-between">
                 <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Muhammad Umair</span></h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">PhD AI Researcher | AI Consultant | AI Engineer</h2>
-                    <p class="text-lg text-gray-600 mb-8">Specializing in Generative AI and multimodal systems for enterprises, development organizations, and startups.</p>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="gradient-text">Usman Ali</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">Medical AI Researcher | MSc Candidate | Graduate Teaching Assistant</h2>
+                    <p class="text-lg text-gray-600 mb-8">Developing clinically actionable AI for medical image segmentation and diagnostic precision. Top 2% MSc student at UESTC with research published in Wiley and Medical Image Analysis.</p>
                     <div class="flex space-x-4">
                         <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">Get In Touch</a>
-                        <a href="#projects" class="border border-primary text-primary hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">View Projects</a>
+                        <a href="#research" class="border border-primary text-primary hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">View Research</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center">
                     <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
-                        <img src="src/dp.jpg" alt="Muhammad Umair" class="w-full h-full object-cover">
+                        <!-- Replace with your actual photo path -->
+                        <div class="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white text-4xl font-bold">
+                            UA
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,65 +149,41 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">About Me</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="max-w-3xl mx-auto text-gray-600">As an AI researcher, engineer, and consultant, Muhammad Umair specializes in building and deploying Generative AI and multimodal systems for enterprises, development organizations, and startups. As an AI consultant for the United Nations Development Programme (UNDP) Pakistan and technical lead for products like Supershopy and Superchat.chat, he has developed AI-powered SaaS solutions for e-commerce and industrial project management, and has supported dozens of startups in taking AI products from idea to proof of concept and production.
-He has led and delivered over 50 AI and generative AI projects, including large-scale NLP, computer vision, agentic, and multimodal applications. His industry portfolio includes roles as an AI Engineer and consultant for organizations such as ESGnie (Singapore), VikkAI, Lincware, BlueOcean, and others. As part of his PhD research, he has built one of the largest multimodal benchmarks for re-identification, focusing on multimodal alignment and test-time training.
-With a strong academic and applied foundation in AI, Umair also serves as an AI Trainer at atomcamp, where he has designed and delivered professional programs on Generative AI, Agentic AI, NLP, and MLOps. He has trained hundreds of students and professionals, helping teams and organizations understand, adopt, and operationalize AI-driven solutions.
-</p>
+                <p class="max-w-3xl mx-auto text-gray-600">I am an MSc candidate in Information and Communication Engineering at the University of Electronic Science and Technology of China (UESTC), ranked in the top 2% of my program with a GPA of 3.91/4.0. My research focuses on developing advanced deep learning frameworks for medical image segmentation, particularly in nuclei and tissue analysis for clinical applications.</p>
             </div>
             
             <div class="md:flex items-center">
                 <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
                     <div class="bg-gray-100 p-6 rounded-xl shadow-md">
-                        <!-- Replace with your education timeline -->
                         <h3 class="text-xl font-semibold mb-4 text-primary">Education</h3>
                         <div class="space-y-4">
                             <div class="border-l-2 border-primary pl-4 py-1">
-                                <h4 class="font-medium">PhD in Artificial Intelligence</h4>
-                                <p class="text-gray-600 text-sm">[University Name], [Year]-Present</p>
+                                <h4 class="font-medium">MSc Information & Communication Engineering</h4>
+                                <p class="text-gray-600 text-sm">UESTC | 2024–Present</p>
+                                <p class="text-gray-500 text-xs mt-1">GPA: 3.91/4.0 (Top 2%)</p>
                             </div>
                             <div class="border-l-2 border-primary pl-4 py-1">
-                                <h4 class="font-medium">MSc in Computer Science</h4>
-                                <p class="text-gray-600 text-sm">[University Name], [Year]-[Year]</p>
-                            </div>
-                            <div class="border-l-2 border-primary pl-4 py-1">
-                                <h4 class="font-medium">BSc in Engineering</h4>
-                                <p class="text-gray-600 text-sm">[University Name], [Year]-[Year]</p>
+                                <h4 class="font-medium">BSc Computer Science</h4>
+                                <p class="text-gray-600 text-sm">Virtual University of Pakistan | 2019–2023</p>
+                                <p class="text-gray-500 text-xs mt-1">GPA: 3.60/4.0 (Top 5%)</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="md:w-1/3 px-0 md:px-8 mb-10 md:mb-0">
-                    <p class="text-gray-600 mb-6">With 8 years of experience in AI research and development, I've worked on diverse projects ranging from computer vision to natural language processing.</p>
-                    <p class="text-gray-600 mb-6">My approach combines rigorous academic research with practical engineering to create solutions that are both innovative and implementable.</p>
-                    <p class="text-gray-600">I'm passionate about knowledge transfer and regularly conduct workshops and training sessions for both technical and non-technical audiences.</p>
+                    <p class="text-gray-600 mb-6"><i class="fas fa-trophy text-yellow-500 mr-2"></i><strong>Awarded CSC Scholarship:</strong> Fully funded 2-year Master's program by the Government of China.</p>
+                    <p class="text-gray-600 mb-6"><i class="fas fa-flask text-primary mr-2"></i><strong>Research Focus:</strong> Multi-class nuclei segmentation, attention-enhanced KAN architectures, adaptive sliding window strategies.</p>
+                    <p class="text-gray-600"><i class="fas fa-heartbeat text-red-500 mr-2"></i><strong>Vision:</strong> Building AI that reduces diagnostic ambiguity and interprets disease as a narrative rather than isolated snapshots.</p>
                 </div>
                 
                 <div class="md:w-1/3">
-                    <h3 class="text-xl font-semibold mb-4 text-primary">Technical Skills</h3>
+                    <h3 class="text-xl font-semibold mb-4 text-primary">Research Skills</h3>
                     <div class="space-y-3">
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-700">Machine Learning</span>
-                                <span class="text-gray-500">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-gray-700">Deep Learning</span>
-                                <span class="text-gray-500">85%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-gray-700">Python</span>
-                                <span class="text-gray-500">95%</span>
+                                <span class="text-gray-700">Medical Image Segmentation</span>
+                                <span class="text-gray-500">Expert</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
@@ -193,11 +191,29 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span class="text-gray-700">TensorFlow/PyTorch</span>
-                                <span class="text-gray-500">88%</span>
+                                <span class="text-gray-700">Deep Learning (PyTorch)</span>
+                                <span class="text-gray-500">Expert</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-research h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Computer Vision</span>
+                                <span class="text-gray-500">Advanced</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="bg-primary h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Python & ML Stack</span>
+                                <span class="text-gray-500">Expert</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-research h-2 rounded-full" style="width: 92%"></div>
                             </div>
                         </div>
                     </div>
@@ -206,238 +222,333 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-gray-50">
+    <!-- Research Section -->
+    <section id="research" class="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">My Services</h2>
+                <h2 class="text-3xl font-bold mb-4">Research Focus</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="max-w-3xl mx-auto text-gray-600">Comprehensive AI solutions tailored to your specific needs, from technical implementation to strategic planning.</p>
+                <p class="max-w-3xl mx-auto text-gray-600">Developing advanced deep learning frameworks for medical image analysis with clinical precision and real-world impact.</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition card-hover">
-                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-brain text-primary text-2xl"></i>
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-microscope text-primary text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">AI Consulting</h3>
-                    <p class="text-gray-600 mb-4">Expert guidance on implementing AI solutions in your organization, including technology selection, architecture design, and ROI analysis.</p>
+                    <h3 class="text-xl font-semibold mb-3">Nuclei Segmentation</h3>
+                    <p class="text-gray-600 mb-4">Multi-class nuclei segmentation using UKAN with adaptive sliding window strategies for histopathology image analysis.</p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center">
-                            <i class="fas fa-check text-secondary mr-2"></i> Technology assessment
+                            <i class="fas fa-check text-primary mr-2"></i> Attention-enhanced KAN architecture
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-secondary mr-2"></i> Solution architecture
+                            <i class="fas fa-check text-primary mr-2"></i> Channel-spatial attention modules
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-secondary mr-2"></i> Implementation roadmap
+                            <i class="fas fa-check text-primary mr-2"></i> Hybrid loss functions
                         </li>
                     </ul>
                 </div>
                 
                 <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition card-hover">
-                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-laptop-code text-secondary text-2xl"></i>
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-research text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">AI Engineering</h3>
-                    <p class="text-gray-600 mb-4">Development of custom AI models and systems tailored to your specific requirements and business objectives.</p>
+                    <h3 class="text-xl font-semibold mb-3">Attention-Based Models</h3>
+                    <p class="text-gray-600 mb-4">Developing attention-based hybrid models for tissue segmentation with improved boundary detection and clinical interpretability.</p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center">
-                            <i class="fas fa-check text-primary mr-2"></i> Custom model development
+                            <i class="fas fa-check text-research mr-2"></i> Multi-modal integration
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-primary mr-2"></i> Data pipeline design
+                            <i class="fas fa-check text-research mr-2"></i> Spatial-channel attention mechanisms
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-primary mr-2"></i> Deployment & scaling
+                            <i class="fas fa-check text-research mr-2"></i> Clinical validation workflows
                         </li>
                     </ul>
                 </div>
                 
                 <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition card-hover">
-                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-chalkboard-teacher text-purple-500 text-2xl"></i>
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-secondary text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">AI Training</h3>
-                    <p class="text-gray-600 mb-4">Comprehensive training programs ranging from introductory workshops to advanced technical sessions for your team.</p>
+                    <h3 class="text-xl font-semibold mb-3">Clinical AI Deployment</h3>
+                    <p class="text-gray-600 mb-4">Building scalable AI systems for clinical settings with focus on actionable insights and reducing diagnostic ambiguity.</p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center">
-                            <i class="fas fa-check text-secondary mr-2"></i> Technical workshops
+                            <i class="fas fa-check text-secondary mr-2"></i> MEDAL project collaboration
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-secondary mr-2"></i> Executive briefings
+                            <i class="fas fa-check text-secondary mr-2"></i> Multi-disease risk models
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-secondary mr-2"></i> Hands-on coding sessions
+                            <i class="fas fa-check text-secondary mr-2"></i> Ethical AI governance
                         </li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Publications</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-gray-600">Peer-reviewed research in medical image analysis and AI-driven healthcare solutions.</p>
+            </div>
+            
+            <div class="space-y-6 max-w-4xl mx-auto">
+                <!-- Publication 1 -->
+                <div class="publication-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-xl font-bold text-gray-900">Multi-Class Nuclei Segmentation using AI with Adaptive Sliding Window</h3>
+                        <span class="bg-blue-100 text-primary text-xs px-3 py-1 rounded-full font-medium">Published</span>
+                    </div>
+                    <p class="text-gray-600 mb-2"><strong>Authors:</strong> Usman Ali, Jin Qi (Supervisor), Aiman Rashid</p>
+                    <p class="text-gray-600 mb-3"><strong>Journal:</strong> International Journal of Imaging Systems and Technology (Wiley) | 2026</p>
+                    <p class="text-gray-700 mb-4">Novel approach combining KAN-based architecture with adaptive sliding window strategies for precise nuclei segmentation in complex histopathology images. Achieves state-of-the-art performance on multi-class segmentation benchmarks.</p>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-gray-500"><i class="fas fa-barcode mr-1"></i> DOI: 10.1002/ima.70283</span>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fas fa-file-pdf mr-1"></i> PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Publication 2 -->
+                <div class="publication-card bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-xl font-bold text-gray-900">Attention-Based Hybrid Model for Tissue Segmentation</h3>
+                        <span class="bg-yellow-100 text-yellow-700 text-xs px-3 py-1 rounded-full font-medium">In Preparation</span>
+                    </div>
+                    <p class="text-gray-600 mb-2"><strong>Authors:</strong> Usman Ali, Aiman Rashid, Jin Qi (Supervisor)</p>
+                    <p class="text-gray-600 mb-3"><strong>Target Journal:</strong> Medical Image Analysis (Elsevier) | Expected 2026</p>
+                    <p class="text-gray-700 mb-4">Advanced attention-based framework integrating spatial and channel-wise attention mechanisms for improved tissue boundary detection and clinical interpretability in medical imaging.</p>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-gray-500"><i class="fas fa-project-diagram mr-1"></i> Methodology: Attention-enhanced hybrid architecture</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
+    <section id="projects" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
+                <h2 class="text-3xl font-bold mb-4">Research Projects</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="max-w-3xl mx-auto text-gray-600">Selected AI projects demonstrating technical expertise and innovative solutions across various domains.</p>
+                <p class="max-w-3xl mx-auto text-gray-600">Selected projects demonstrating technical expertise in medical AI and deep learning.</p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition card-hover">
-                    <div class="h-48 bg-gray-300 flex items-center justify-center">
-                        <span class="text-gray-500">Project Image</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                        <span class="text-white text-xl font-semibold">MSc Thesis</span>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">Medical Image Analysis System</h3>
-                            <span class="bg-blue-100 text-primary text-xs px-2 py-1 rounded-full">Computer Vision</span>
+                            <h3 class="text-xl font-semibold">Multi-Class Nuclei Segmentation</h3>
+                            <span class="research-badge text-xs px-2 py-1 rounded-full">Thesis Project</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Developed a deep learning system for automated detection of abnormalities in medical scans with 94% accuracy.</p>
+                        <p class="text-gray-600 mb-4">Developing UKAN-based architecture with adaptive sliding window strategies for precise nuclei segmentation in histopathology images. Incorporates attention mechanisms and hybrid loss functions.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">CNN</span>
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">TensorFlow</span>
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">DICOM</span>
+                            <span class="bg-blue-100 text-primary text-xs px-2 py-1 rounded">PyTorch</span>
+                            <span class="bg-purple-100 text-research text-xs px-2 py-1 rounded">KAN Architecture</span>
+                            <span class="bg-green-100 text-secondary text-xs px-2 py-1 rounded">Medical Imaging</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Attention Mechanisms</span>
                         </div>
-                        <a href="#" class="text-primary hover:underline font-medium">View Details →</a>
+                        <p class="text-sm text-gray-500"><i class="fas fa-chart-line mr-1"></i> <strong>Impact:</strong> Improved segmentation accuracy for cancer diagnosis support</p>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition card-hover">
-                    <div class="h-48 bg-gray-300 flex items-center justify-center">
-                        <span class="text-gray-500">Project Image</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <span class="text-white text-xl font-semibold">MEDAL Project</span>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">Predictive Maintenance Platform</h3>
-                            <span class="bg-green-100 text-secondary text-xs px-2 py-1 rounded-full">Time Series</span>
+                            <h3 class="text-xl font-semibold">MEDAL: Medical AI for Disease Analysis</h3>
+                            <span class="bg-purple-100 text-research text-xs px-2 py-1 rounded-full">Collaborative Research</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Created an IoT-based predictive maintenance solution reducing equipment downtime by 35% for manufacturing clients.</p>
+                        <p class="text-gray-600 mb-4">International consortium project focusing on AI-driven medical imaging analysis, risk models, and multi-modality integration for clinical decision support.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">LSTM</span>
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">PyTorch</span>
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">IoT</span>
+                            <span class="bg-purple-100 text-research text-xs px-2 py-1 rounded">Multi-modal AI</span>
+                            <span class="bg-blue-100 text-primary text-xs px-2 py-1 rounded">Radiomics</span>
+                            <span class="bg-yellow-100 text-yellow-700 text-xs px-2 py-1 rounded">Clinical Validation</span>
+                            <span class="bg-red-100 text-red-600 text-xs px-2 py-1 rounded">Oncology</span>
                         </div>
-                        <a href="#" class="text-primary hover:underline font-medium">View Details →</a>
+                        <p class="text-sm text-gray-500"><i class="fas fa-globe mr-1"></i> <strong>Scope:</strong> Multidisciplinary international collaboration</p>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition card-hover">
-                    <div class="h-48 bg-gray-300 flex items-center justify-center">
-                        <span class="text-gray-500">Project Image</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center">
+                        <span class="text-white text-xl font-semibold">Delphi-M4</span>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">Multilingual Chatbot</h3>
-                            <span class="bg-purple-100 text-purple-500 text-xs px-2 py-1 rounded-full">NLP</span>
+                            <h3 class="text-xl font-semibold">Delphi-M4 Health Risk Models</h3>
+                            <span class="bg-green-100 text-secondary text-xs px-2 py-1 rounded-full">AI Development</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Built a transformer-based chatbot supporting 5 languages with context-aware responses for customer service applications.</p>
+                        <p class="text-gray-600 mb-4">Developing multi-modal multi-disease prediction models using routine health data for early disease detection and risk stratification.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">BERT</span>
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">HuggingFace</span>
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">FastAPI</span>
+                            <span class="bg-green-100 text-secondary text-xs px-2 py-1 rounded">Risk Modeling</span>
+                            <span class="bg-blue-100 text-primary text-xs px-2 py-1 rounded">Health Data</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">Multi-modal</span>
                         </div>
-                        <a href="#" class="text-primary hover:underline font-medium">View Details →</a>
+                        <p class="text-sm text-gray-500"><i class="fas fa-heart mr-1"></i> <strong>Goal:</strong> Early detection and preventive healthcare</p>
                     </div>
                 </div>
                 
                 <!-- Project 4 -->
-                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition card-hover">
-                    <div class="h-48 bg-gray-300 flex items-center justify-center">
-                        <span class="text-gray-500">Project Image</span>
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition card-hover">
+                    <div class="h-48 bg-gradient-to-br from-gray-400 to-blue-500 flex items-center justify-center">
+                        <span class="text-white text-xl font-semibold">3D AR Platform</span>
                     </div>
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-2">
-                            <h3 class="text-xl font-semibold">Autonomous Drone Navigation</h3>
-                            <span class="bg-yellow-100 text-yellow-600 text-xs px-2 py-1 rounded-full">Reinforcement Learning</span>
+                            <h3 class="text-xl font-semibold">Prasl 3D AR Platform</h3>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full">Industry Project</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Implemented a DRL-based navigation system enabling drones to autonomously avoid obstacles in dynamic environments.</p>
+                        <p class="text-gray-600 mb-4">Revamped 3D augmented reality platform for industrial applications, resulting in 25% increase in transactions and improved user engagement.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">PPO</span>
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">Gazebo</span>
-                            <span class="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded">ROS</span>
+                            <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">3D Graphics</span>
+                            <span class="bg-blue-100 text-primary text-xs px-2 py-1 rounded">Python</span>
+                            <span class="bg-purple-100 text-research text-xs px-2 py-1 rounded">Flask</span>
+                            <span class="bg-green-100 text-secondary text-xs px-2 py-1 rounded">PostgreSQL</span>
                         </div>
-                        <a href="#" class="text-primary hover:underline font-medium">View Details →</a>
+                        <p class="text-sm text-gray-500"><i class="fas fa-cube mr-1"></i> <strong>Impact:</strong> 25% boost in platform transactions</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block border border-primary text-primary hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">View All Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research" class="py-16 bg-gray-50">
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Research & Publications</h2>
+                <h2 class="text-3xl font-bold mb-4">Professional Experience</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="max-w-3xl mx-auto text-gray-600">Peer-reviewed publications in top-tier conferences and journals showcasing my contributions to AI research.</p>
+                <p class="max-w-3xl mx-auto text-gray-600">Diverse experience spanning academic research, industry AI development, and engineering roles.</p>
             </div>
             
-            <div class="space-y-6 max-w-4xl mx-auto">
-                <!-- Publication 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition card-hover">
-                    <h3 class="text-xl font-semibold mb-2">"Novel Architecture for Few-Shot Learning in Medical Imaging"</h3>
-                    <p class="text-gray-600 mb-3">NeurIPS 2023 | <span class="text-primary">Conference Paper</span></p>
-                    <p class="text-gray-600 mb-4">Proposed a meta-learning approach that achieves state-of-the-art performance with limited labeled medical imaging data.</p>
-                    <div class="flex items-center">
-                        <a href="#" class="text-primary hover:underline mr-4">PDF</a>
-                        <a href="#" class="text-primary hover:underline mr-4">Code</a>
-                        <a href="#" class="text-primary hover:underline">Cite</a>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Experience 1 -->
+                <div class="border-l-4 border-primary pl-6 py-4 hover:bg-gray-50 transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Graduate Teaching Assistant</h3>
+                            <p class="text-primary font-medium">University of Glasgow (Joint Program with UESTC)</p>
+                        </div>
+                        <span class="bg-blue-100 text-primary text-xs px-3 py-1 rounded">Apr 2025 – Present</span>
                     </div>
+                    <ul class="text-gray-600 space-y-2 mt-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-primary text-xs mt-1.5 mr-2"></i>
+                            <span>Leading research projects involving interviews, data analysis, literature reviews, and ethics management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-primary text-xs mt-1.5 mr-2"></i>
+                            <span>Providing course support and grading assignments for graduate-level courses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-primary text-xs mt-1.5 mr-2"></i>
+                            <span>Supporting interdisciplinary research in medical AI and computer vision</span>
+                        </li>
+                    </ul>
                 </div>
                 
-                <!-- Publication 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition card-hover">
-                    <h3 class="text-xl font-semibold mb-2">"Explainable AI for Industrial Predictive Maintenance"</h3>
-                    <p class="text-gray-600 mb-3">IEEE Transactions on Industrial Informatics 2023 | <span class="text-secondary">Journal Article</span></p>
-                    <p class="text-gray-600 mb-4">Developed an interpretable deep learning framework that provides both predictions and explanations for equipment failures.</p>
-                    <div class="flex items-center">
-                        <a href="#" class="text-primary hover:underline mr-4">PDF</a>
-                        <a href="#" class="text-primary hover:underline mr-4">Code</a>
-                        <a href="#" class="text-primary hover:underline">Cite</a>
+                <!-- Experience 2 -->
+                <div class="border-l-4 border-purple-500 pl-6 py-4 hover:bg-gray-50 transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Python Developer</h3>
+                            <p class="text-research font-medium">Broadstone Technologies</p>
+                        </div>
+                        <span class="bg-purple-100 text-research text-xs px-3 py-1 rounded">Aug 2022 – Oct 2024</span>
                     </div>
+                    <ul class="text-gray-600 space-y-2 mt-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-purple-500 text-xs mt-1.5 mr-2"></i>
+                            <span>Developed Meezy Loyalty App, increasing user engagement by 40%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-purple-500 text-xs mt-1.5 mr-2"></i>
+                            <span>Revamped Prasl 3D AR platform, boosting transactions by 25%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-purple-500 text-xs mt-1.5 mr-2"></i>
+                            <span>Launched Cloaked Privacy VPN using WireGuard, accelerating client acquisition by 60%</span>
+                        </li>
+                    </ul>
                 </div>
                 
-                <!-- Publication 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition card-hover">
-                    <h3 class="text-xl font-semibold mb-2">"Efficient Federated Learning for Edge Devices"</h3>
-                    <p class="text-gray-600 mb-3">ICML 2022 | <span class="text-primary">Conference Paper</span></p>
-                    <p class="text-gray-600 mb-4">Introduced a communication-efficient federated learning algorithm that reduces bandwidth requirements by 60% without sacrificing accuracy.</p>
-                    <div class="flex items-center">
-                        <a href="#" class="text-primary hover:underline mr-4">PDF</a>
-                        <a href="#" class="text-primary hover:underline mr-4">Code</a>
-                        <a href="#" class="text-primary hover:underline">Cite</a>
+                <!-- Experience 3 -->
+                <div class="border-l-4 border-green-500 pl-6 py-4 hover:bg-gray-50 transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">Automation Engineer</h3>
+                            <p class="text-secondary font-medium">MLC Pakistan</p>
+                        </div>
+                        <span class="bg-green-100 text-secondary text-xs px-3 py-1 rounded">Apr 2022 – Jul 2022</span>
                     </div>
+                    <ul class="text-gray-600 space-y-2 mt-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-green-500 text-xs mt-1.5 mr-2"></i>
+                            <span>Built automated workflows, AI models, and data pipelines</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-green-500 text-xs mt-1.5 mr-2"></i>
+                            <span>Performed statistical analyses for process optimization</span>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block border border-primary text-primary hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition">View All Publications</a>
+                
+                <!-- Experience 4 -->
+                <div class="border-l-4 border-yellow-500 pl-6 py-4 hover:bg-gray-50 transition">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900">AI Intern</h3>
+                            <p class="text-yellow-700 font-medium">Ekkel.ai</p>
+                        </div>
+                        <span class="bg-yellow-100 text-yellow-700 text-xs px-3 py-1 rounded">Dec 2021 – Mar 2022</span>
+                    </div>
+                    <ul class="text-gray-600 space-y-2 mt-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-yellow-500 text-xs mt-1.5 mr-2"></i>
+                            <span>Developed AI models and REST APIs for data-driven decision support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-yellow-500 text-xs mt-1.5 mr-2"></i>
+                            <span>Built data pipelines and performed analyses for client projects</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
+    <section id="contact" class="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
                 <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p class="max-w-3xl mx-auto text-gray-600">Interested in collaborating or learning more about my work? Reach out for consulting inquiries, research collaborations, or training opportunities.</p>
+                <p class="max-w-3xl mx-auto text-gray-600">Interested in research collaboration, PhD opportunities, or discussing medical AI applications? Reach out!</p>
             </div>
             
             <div class="md:flex">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-8">
-                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
                         <h3 class="text-xl font-semibold mb-6 text-primary">Contact Information</h3>
                         
                         <div class="space-y-6">
@@ -447,7 +558,18 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
                                 </div>
                                 <div>
                                     <h4 class="font-medium text-gray-700">Email</h4>
-                                    <p class="text-gray-600">muhammadumair894@gmail.com</p>
+                                    <p class="text-gray-600">usmanalipgc@gmail.com</p>
+                                    <p class="text-gray-500 text-sm">usmanali@std.uestc.edu.cn</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-research"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-700">Phone</h4>
+                                    <p class="text-gray-600">(+86) 173 1137 5127</p>
                                 </div>
                             </div>
                             
@@ -458,16 +580,17 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
                                 <div>
                                     <h4 class="font-medium text-gray-700">Location</h4>
                                     <p class="text-gray-600">Chengdu, China</p>
+                                    <p class="text-gray-500 text-sm">Based at UESTC, working with University of Glasgow</p>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="bg-purple-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-calendar-alt text-purple-500"></i>
+                                <div class="bg-gray-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-user-graduate text-gray-700"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-medium text-gray-700">Availability</h4>
-                                    <p class="text-gray-600">Available for consulting projects and speaking engagements</p>
+                                    <h4 class="font-medium text-gray-700">Current Status</h4>
+                                    <p class="text-gray-600">MSc Candidate | Seeking PhD opportunities (Fall 2026)</p>
                                 </div>
                             </div>
                         </div>
@@ -475,17 +598,17 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
                         <div class="mt-8">
                             <h4 class="font-medium text-gray-700 mb-4">Connect With Me</h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <a href="https://linkedin.com/in/usmanali07" target="_blank" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 transition">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                                <a href="#" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 transition">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="#" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
-                                    <i class="fab fa-twitter"></i>
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 transition">
+                                    <i class="fas fa-file-alt"></i>
                                 </a>
-                                <a href="#" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center text-gray-700">
-                                    <i class="fab fa-google-scholar"></i>
+                                <a href="#" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center text-gray-700 transition">
+                                    <i class="fas fa-graduation-cap"></i>
                                 </a>
                             </div>
                         </div>
@@ -493,20 +616,20 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
                 </div>
                 
                 <div class="md:w-1/2">
-                    <form class="bg-gray-50 p-8 rounded-xl shadow-md">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
                         <div class="mb-6">
                             <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="John Doe">
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your Name">
                         </div>
                         
                         <div class="mb-6">
                             <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="john@example.com">
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="your.email@example.com">
                         </div>
                         
                         <div class="mb-6">
                             <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Consulting Inquiry">
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Research Collaboration / PhD Inquiry">
                         </div>
                         
                         <div class="mb-6">
@@ -514,7 +637,9 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
                             <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Your message here..."></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">Send Message</button>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
                     </form>
                 </div>
             </div>
@@ -526,28 +651,38 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:flex justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <a href="#" class="text-2xl font-bold text-white">AI<span class="text-secondary">Researcher</span></a>
-                    <p class="text-gray-400 mt-2">Bridging AI research and practical applications.</p>
+                    <a href="#" class="text-2xl font-bold text-white">Usman<span class="text-research">Ali</span></a>
+                    <p class="text-gray-400 mt-2">Medical AI Researcher | Building clinically actionable AI solutions</p>
                 </div>
                 
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div>
-                        <h3 class="text-white font-medium mb-4">Explore</h3>
+                        <h3 class="text-white font-medium mb-4">Navigate</h3>
                         <ul class="space-y-2">
                             <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
                             <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
-                            <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
-                            <li><a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                            <li><a href="#research" class="text-gray-400 hover:text-white transition">Research</a></li>
+                            <li><a href="#publications" class="text-gray-400 hover:text-white transition">Publications</a></li>
                         </ul>
                     </div>
                     
                     <div>
-                        <h3 class="text-white font-medium mb-4">Resources</h3>
+                        <h3 class="text-white font-medium mb-4">Projects</h3>
                         <ul class="space-y-2">
-                            <li><a href="#research" class="text-gray-400 hover:text-white transition">Research</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white transition">Research Projects</a></li>
+                            <li><a href="#experience" class="text-gray-400 hover:text-white transition">Experience</a></li>
                             <li><a href="#" class="text-gray-400 hover:text-white transition">GitHub</a></li>
                             <li><a href="#" class="text-gray-400 hover:text-white transition">CV</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-white font-medium mb-4">Research</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#research" class="text-gray-400 hover:text-white transition">Focus Areas</a></li>
+                            <li><a href="#publications" class="text-gray-400 hover:text-white transition">Publications</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Thesis</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">MEDAL Project</a></li>
                         </ul>
                     </div>
                     
@@ -555,28 +690,28 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
                         <h3 class="text-white font-medium mb-4">Connect</h3>
                         <ul class="space-y-2">
                             <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">LinkedIn</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Twitter</a></li>
-                            <li><a href="#" class="text-gray-400 hover:text-white transition">Google Scholar</a></li>
+                            <li><a href="https://linkedin.com/in/usmanali07" target="_blank" class="text-gray-400 hover:text-white transition">LinkedIn</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Email</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">ResearchGate</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2023 [Your Name]. All rights reserved.</p>
+                <p class="text-gray-400 mb-4 md:mb-0">© 2026 Usman Ali. All rights reserved.</p>
                 <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/usmanali07" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
                     <a href="#" class="text-gray-400 hover:text-white transition">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fas fa-file-alt"></i>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-google-scholar"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </a>
                 </div>
             </div>
@@ -623,6 +758,16 @@ With a strong academic and applied foundation in AI, Umair also serves as an AI 
                 nav.classList.remove('shadow-lg');
             }
         });
+        
+        // Form submission handler
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! I will get back to you soon.');
+                form.reset();
+            });
+        }
     </script>
 </body>
 </html>
