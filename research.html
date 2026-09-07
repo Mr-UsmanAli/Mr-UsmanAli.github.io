@@ -42,25 +42,25 @@
   </div>
 </section>
 
-<section>
+<section class="band">
   <div class="wrap">
     <div class="grid grid-2">
-      <div class="card">
+      <div class="card reveal">
         <span class="eyebrow">01</span>
         <h3>Trustworthy &amp; Secure AI</h3>
         <p class="small">Trustworthy AI, AI security and robustness, privacy-preserving AI — building systems whose behavior can be trusted and verified, not just measured on benchmark accuracy.</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <span class="eyebrow">02</span>
         <h3>Federated &amp; Decentralized Learning</h3>
         <p class="small">Federated learning, federated edge AI, secure and decentralized ML, non-IID and personalized federated learning across heterogeneous clients.</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <span class="eyebrow">03</span>
         <h3>Healthcare AI</h3>
         <p class="small">Multimodal healthcare AI, healthcare foundation models, AI for digital health, multimodal and longitudinal clinical data.</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <span class="eyebrow">04</span>
         <h3>Edge Intelligence</h3>
         <p class="small">Edge intelligence and TinyML for deployment on resource-constrained devices close to the patient.</p>
@@ -78,6 +78,38 @@
   </div>
 </section>
 
+<section class="band">
+  <div class="wrap">
+    <span class="eyebrow">Research Architecture</span>
+    <h2>How a project moves from question to result</h2>
+    <p class="prose">The pipeline underlying dAIbetes and earlier segmentation work. Select a stage to read what happens there.</p>
+    <div class="arch" role="tablist" aria-label="Research pipeline stages">
+      <button class="arch-step" role="tab" aria-selected="false" data-detail="Every project starts from a concrete clinical question — here, predicting personalized Type 2 diabetes treatment response — framed so it can be evaluated, not just described.">
+        <span class="n">01</span><span class="label">Problem</span>
+      </button>
+      <button class="arch-step" role="tab" aria-selected="false" data-detail="Multi-site clinical data is heterogeneous and non-IID by nature — different populations, instruments, and recording conventions per institution.">
+        <span class="n">02</span><span class="label">Dataset</span>
+      </button>
+      <button class="arch-step" role="tab" aria-selected="false" data-detail="Model architecture is chosen for the data modality — attention-enhanced segmentation networks for imaging, personalized predictive models for longitudinal clinical data.">
+        <span class="n">03</span><span class="label">Model</span>
+      </button>
+      <button class="arch-step" role="tab" aria-selected="false" data-detail="Training happens across distributed clients rather than on a pooled dataset — each site trains locally and only model updates are exchanged.">
+        <span class="n">04</span><span class="label">Distributed Training</span>
+      </button>
+      <button class="arch-step" role="tab" aria-selected="false" data-detail="Privacy and security constraints — keeping patient data local, guarding against inference attacks — are treated as design requirements, not an afterthought.">
+        <span class="n">05</span><span class="label">Privacy / Security</span>
+      </button>
+      <button class="arch-step" role="tab" aria-selected="false" data-detail="Evaluation covers both predictive performance (Dice, IoU, accuracy) and robustness under non-IID and adversarial conditions.">
+        <span class="n">06</span><span class="label">Evaluation</span>
+      </button>
+      <button class="arch-step" role="tab" aria-selected="false" data-detail="Results, code, and experimental configurations are documented so the pipeline can be rerun and verified — a prerequisite for clinical trust.">
+        <span class="n">07</span><span class="label">Reproducibility</span>
+      </button>
+    </div>
+    <div class="arch-detail mono small" aria-live="polite"></div>
+  </div>
+</section>
+
 <footer class="site-footer">
   <div class="wrap">
     <div>&copy; 2026 Usman Ali &middot; PhD Candidate, University of Hamburg</div>
@@ -88,6 +120,8 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
